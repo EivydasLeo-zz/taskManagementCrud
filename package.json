@@ -1,0 +1,19 @@
+{
+  "name": "taskmanagementsystem",
+  "version": "1.0.0",
+  "description": "taskManagementCrud",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EivydasLeo/taskManagementCrud.git"
+  },
+  "author": "Eivydas Leonavicius",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EivydasLeo/taskManagementCrud/issues"
+  },
+  "homepage": "https://github.com/EivydasLeo/taskManagementCrud#readme"
+}
