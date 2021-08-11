@@ -5,7 +5,7 @@ require('dotenv').config();
 
 const PORT = 4000;
 
-// prisijungimas prie duomenu bazes
+// prisijungimas prie mongooDb
 mongoose
   .connect(process.env.MONGO_CONNECT_STRING, { useNewUrlParser: true, useUnifiedTopology: true })
   .then((result) => {
