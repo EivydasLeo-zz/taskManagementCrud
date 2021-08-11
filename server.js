@@ -28,16 +28,26 @@ app.post('/addNewTask', (req, res) => {
   console.log(req.body);
 
   const newTask = new TaskModel({
-    title: 'Meeting',
-    description: 'Company morning meeting',
-    category: 'Work',
-    status: 'Open',
+    title: 'TeamBuilding',
+    description: 'Taking a bicycle trip to Kurtuvenai',
+    category: 'Activities',
+    status: 'Complete',
   });
 
   newTask
     .save()
     .then((result) => res.json(result))
     .catch((err) => console.log(err));
+});
+
+// Get all tasks
+app.get('/allTasks', async (req, res) => {
+  try {
+    const tasks = await TaskModel.find();
+    res.json(tasks);
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 app.listen(PORT, console.log(`Backend online on port ${PORT}`));
