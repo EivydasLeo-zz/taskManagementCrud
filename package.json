@@ -4,7 +4,8 @@
   "description": "taskManagementCrud",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon server.js",
+    "react": "npm start --prefix client"
   },
   "repository": {
     "type": "git",
