@@ -1,12 +1,33 @@
-.taskContainer {
+.taskListContainer {
   background: rgba(226, 225, 225, 0.466);
   height: 1200px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding-top: 2rem;
 }
 
-.taskTitle {
+.taskListTitle {
   text-align: center;
   padding: 1rem;
   margin-top: 0.2rem;
   box-shadow: 0px 4px 10px 0px rgb(0 0 0 / 15%);
   background-color: white;
+}
+
+.taskList-Body {
+  background-color: #fff;
+  padding: 1rem;
+}
+
+.taskList-Table {
+  text-align: center;
+  border: 1px solid black;
+}
+
+.taskList-Table > table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
 }
