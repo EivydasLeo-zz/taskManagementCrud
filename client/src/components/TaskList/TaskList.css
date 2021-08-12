@@ -1,0 +1,12 @@
+.taskContainer {
+  background: rgba(226, 225, 225, 0.466);
+  height: 1200px;
+}
+
+.taskTitle {
+  text-align: center;
+  padding: 1rem;
+  margin-top: 0.2rem;
+  box-shadow: 0px 4px 10px 0px rgb(0 0 0 / 15%);
+  background-color: white;
+}

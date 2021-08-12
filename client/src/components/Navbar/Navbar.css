@@ -1,0 +1,10 @@
+.navbarContainer {
+  background-color: #ff6b00;
+  height: 100px;
+  box-shadow: 0px 2px 2px 0px rgb(0 0 0 / 25%);
+}
+
+.navbarImg > img {
+  width: 100px;
+  margin-left: 1rem;
+}
