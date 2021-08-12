@@ -2,12 +2,16 @@ require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const TaskModel = require('./models/Task');
+const morgan = require('morgan');
+const cors = require('cors');
 
 const app = express();
 const PORT = 4000;
 
 // Middleware
 app.use(express.json());
+app.use(morgan('dev'));
+app.use(cors());
 
 // Prisijungimas prie mongooDb
 {
