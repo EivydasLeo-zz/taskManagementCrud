@@ -1,13 +1,18 @@
 import React, { Component } from 'react';
 import Navbar from '../Navbar/Navbar';
 import TaskList from './../TaskList/TaskList';
+import { Switch, Route } from 'react-router';
+import NewTask from '../NewTask/NewTask';
 class MainPage extends Component {
   state = {};
   render() {
     return (
       <div className="mainPage">
         <Navbar />
-        <TaskList />
+        <Switch>
+          <Route path="/addNewTask" component={NewTask}></Route>
+          <Route path="/" component={TaskList}></Route>
+        </Switch>
       </div>
     );
   }

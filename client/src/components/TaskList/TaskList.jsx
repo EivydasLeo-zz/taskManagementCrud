@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../TaskList/TaskList.css';
 import { getAllTasks } from '../../service/fetchData';
-
+import { Link } from 'react-router-dom';
 class TaskList extends Component {
   constructor(props) {
     super(props);
@@ -30,7 +30,9 @@ class TaskList extends Component {
         <div className="taskList-Body">
           <div className="taskList-Table">
             <h3>Task management system</h3>
-            <button>Add Task</button>
+            <Link to="/addNewTask">
+              <button>Add Task</button>
+            </Link>
             <table>
               <thead>
                 <tr>
