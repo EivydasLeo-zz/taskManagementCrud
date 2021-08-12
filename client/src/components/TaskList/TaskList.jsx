@@ -1,8 +1,29 @@
 import React, { Component } from 'react';
 import '../TaskList/TaskList.css';
+import { getAllTasks } from '../../service/fetchData';
 
 class TaskList extends Component {
-  state = {};
+  constructor(props) {
+    super(props);
+    this.state = {
+      tasksData: [],
+    };
+  }
+
+  async getTasks() {
+    const tasks = await getAllTasks();
+    console.log(tasks);
+    this.setState({ tasksData: tasks });
+  }
+
+  componentDidMount() {
+    this.getTasks();
+  }
+
+  renderRows() {
+    return;
+  }
+
   render() {
     return (
       <div className="taskListContainer">
@@ -21,13 +42,17 @@ class TaskList extends Component {
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>Meeting</td>
-                  <td>Meeting with team</td>
-                  <td>Friday</td>
-                  <td>Incoming</td>
-                  <button>View task details</button>
-                </tr>
+                {this.state.tasksData.map((data) => (
+                  <tr key={data._id}>
+                    <td>{data.title}</td>
+                    <td>{data.description}</td>
+                    <td>{data.createdAt}</td>
+                    <td>{data.status}</td>
+                    <td>
+                      <button>View Details</button>
+                    </td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>
