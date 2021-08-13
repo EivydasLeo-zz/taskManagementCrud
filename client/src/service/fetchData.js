@@ -35,3 +35,14 @@ export const postNewTask = async (obj) => {
     console.log('Error occured: ', err);
   }
 };
+
+export const getSingleTask = async (id) => {
+  try {
+    const res = await fetch(`${fetchApiBaseUrl}/allTasks/${id}`, reqOptions);
+    const data = await res.json();
+    console.log(data);
+    return data;
+  } catch (err) {
+    console.log('Get single task error:', err);
+  }
+};

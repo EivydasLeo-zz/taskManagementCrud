@@ -50,7 +50,7 @@ app.get('/allTasks', async (req, res) => {
 });
 
 // Get single task by id
-app.get('/viewDetails/:id', async (req, res) => {
+app.get('/allTasks/:id', async (req, res) => {
   try {
     const taskDetail = await TaskModel.findById(req.params.id);
     res.json(taskDetail);

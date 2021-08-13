@@ -4,6 +4,7 @@ import TaskList from './../TaskList/TaskList';
 import { Switch, Route } from 'react-router';
 import NewTask from '../NewTask/NewTask';
 import ViewTaskDetails from '../ViewTaskDetails/ViewTaskDetails';
+
 class MainPage extends Component {
   state = {};
   render() {
@@ -12,7 +13,7 @@ class MainPage extends Component {
         <Navbar />
         <Switch>
           <Route path="/addNewTask" component={NewTask}></Route>
-          <Route path="/viewDetails" component={ViewTaskDetails}></Route>
+          <Route path="/allTasks/:id" component={ViewTaskDetails}></Route>
           <Route path="/" component={TaskList}></Route>
         </Switch>
       </div>

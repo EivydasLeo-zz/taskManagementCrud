@@ -12,12 +12,15 @@ class TaskList extends Component {
 
   async getTasks() {
     const tasks = await getAllTasks();
-    console.log(tasks);
     this.setState({ tasksData: tasks });
   }
 
   componentDidMount() {
     this.getTasks();
+  }
+
+  async handleView(id) {
+    this.props.history.push('/allTasks/' + id);
   }
 
   render() {
@@ -47,9 +50,7 @@ class TaskList extends Component {
                     <td>{data.createdAt}</td>
                     <td>{data.status}</td>
                     <td>
-                      <Link to="/viewDetails">
-                        <button>View Details</button>
-                      </Link>
+                      <button onClick={() => this.handleView(data._id)}>View Details</button>
                     </td>
                   </tr>
                 ))}
