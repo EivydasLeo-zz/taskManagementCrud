@@ -20,10 +20,6 @@ class TaskList extends Component {
     this.getTasks();
   }
 
-  renderRows() {
-    return;
-  }
-
   render() {
     return (
       <div className="taskListContainer">
@@ -51,7 +47,9 @@ class TaskList extends Component {
                     <td>{data.createdAt}</td>
                     <td>{data.status}</td>
                     <td>
-                      <button>View Details</button>
+                      <Link to="/viewDetails">
+                        <button>View Details</button>
+                      </Link>
                     </td>
                   </tr>
                 ))}
