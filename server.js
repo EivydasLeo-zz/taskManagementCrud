@@ -49,4 +49,14 @@ app.get('/allTasks', async (req, res) => {
   }
 });
 
+// Get single task by id
+app.get('/viewDetails/:id', async (req, res) => {
+  try {
+    const taskDetail = await TaskModel.findById(req.params.id);
+    res.json(taskDetail);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 app.listen(PORT, console.log(`Backend online on port ${PORT}`));
