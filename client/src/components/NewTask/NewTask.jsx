@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { postNewTask } from '../../service/fetchData';
 
 class NewTask extends Component {
   constructor() {
@@ -10,23 +11,56 @@ class NewTask extends Component {
       status: '',
     };
   }
+
+  handleTitle = (event) => {
+    this.setState({ title: event.target.value });
+  };
+  handleDescription = (event) => {
+    this.setState({ description: event.target.value });
+  };
+  handleCategory = (event) => {
+    this.setState({ category: event.target.value });
+  };
+  handleStatus = (event) => {
+    this.setState({ status: event.target.value });
+  };
+
+  handleSubmit = (event) => {
+    event.preventDefault();
+    const objToSend = {
+      title: this.state.title,
+      description: this.state.description,
+      category: this.state.category,
+      status: this.state.status,
+    };
+    postNewTask(objToSend);
+    const history = this.props.history;
+    history.push('/');
+    console.log('I will send this ', objToSend);
+  };
+
   render() {
     return (
       <div className="newTaskContainer">
-        <form className="newTask-Form">
+        <form className="newTask-Form" onSubmit={this.handleSubmit}>
           <div className="newTask-Title">
             <label className="title-label">Task Title:</label>
             <div>
-              <input type="text" placeholder="Title" />
+              <input type="text" placeholder="Title" value={this.state.title} onChange={this.handleTitle} />
             </div>
             <label className="description-label">Task Description:</label>
             <div className="newTask-Description">
-              <input type="text" placeholder="Description" />
+              <input
+                type="text"
+                placeholder="Description"
+                value={this.state.description}
+                onChange={this.handleDescription}
+              />
             </div>
           </div>
           <div className="newTask-Category">
             <label className="category-label">Task Category:</label>
-            <select name="category" id="category">
+            <select name="category" id="category" onChange={this.handleCategory}>
               <option className="category-option">Choose...</option>
               <option value="Call">Call</option>
               <option value="Email">Email</option>
@@ -36,7 +70,7 @@ class NewTask extends Component {
           </div>
           <div className="newTask-Status">
             <label className="status-label">Task Status:</label>
-            <select name="status" id="status">
+            <select name="status" id="status" onChange={this.handleStatus}>
               <option className="status-option">Choose...</option>
               <option value="Open">Open</option>
               <option value="Closed">Closed</option>

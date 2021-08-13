@@ -21,3 +21,17 @@ export const getAllTasks = async () => {
     console.log('Get all tasks error: ', err);
   }
 };
+
+export const postNewTask = async (obj) => {
+  try {
+    const res = await fetch(`${fetchApiBaseUrl}/addNewTask`, {
+      method: 'POST',
+      body: JSON.stringify(obj),
+      ...reqOptions,
+    });
+    const result = await res.json();
+    console.log('New Task Created: ', result);
+  } catch (err) {
+    console.log('Error occured: ', err);
+  }
+};

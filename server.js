@@ -31,12 +31,7 @@ app.use(cors());
 app.post('/addNewTask', (req, res) => {
   console.log(req.body);
 
-  const newTask = new TaskModel({
-    title: 'TeamBuilding',
-    description: 'Taking a bicycle trip to Kurtuvenai',
-    category: 'Activities',
-    status: 'Complete',
-  });
+  const newTask = new TaskModel(req.body);
 
   newTask
     .save()
