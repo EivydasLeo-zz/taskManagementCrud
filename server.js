@@ -1,9 +1,9 @@
 require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
-const TaskModel = require('./models/Task');
 const morgan = require('morgan');
 const cors = require('cors');
+const apiRoutes = require('./api/apiRoutes');
 
 const app = express();
 const PORT = 4000;
@@ -21,63 +21,8 @@ app.use(cors());
       console.log('Conneced to MongooDB');
     })
     .catch((err) => console.error(err.message));
-
-  app.get('/', (req, res) => {
-    res.status(200).json(`Server is working at PORT ${PORT}`);
-  });
 }
 
-// Add new task
-app.post('/addNewTask', (req, res) => {
-  console.log(req.body);
-
-  const newTask = new TaskModel(req.body);
-
-  newTask
-    .save()
-    .then((result) => res.json(result))
-    .catch((err) => console.log(err));
-});
-
-// Get all tasks
-app.get('/allTasks', async (req, res) => {
-  try {
-    const tasks = await TaskModel.find();
-    res.json(tasks);
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-
-// Get single task by id
-app.get('/allTasks/:id', async (req, res) => {
-  try {
-    const taskDetail = await TaskModel.findById(req.params.id);
-    res.json(taskDetail);
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-
-// Delete task
-app.delete('/allTasks/delete/:id', async (req, res) => {
-  await TaskModel.findOneAndDelete({ _id: req.params.id });
-  res.send({ sucess: true, msg: 'Task has been deleted' });
-});
-
-// Edit task
-app.put('/allTasks/edit/:id', async (req, res) => {
-  const { title, description, category, status } = req.body;
-  await TaskModel.findOneAndUpdate(
-    { _id: req.params.id },
-    {
-      title,
-      description,
-      category,
-      status,
-    }
-  );
-  res.send({ success: true, msg: `Task ${title} has been updated.` });
-});
+app.use('/', apiRoutes);
 
 app.listen(PORT, console.log(`Backend online on port ${PORT}`));
