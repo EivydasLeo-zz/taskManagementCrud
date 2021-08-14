@@ -1,0 +1,72 @@
+/* Variables */
+:root {
+  --white: rgb(255, 255, 255);
+  --nfq: #ff6b00;
+  --blackshadow: rgba(0, 0, 0, 0.8);
+  --textgray: #757575;
+}
+
+.viewTaskDetail-Container {
+  padding: 10rem 0rem 20rem 0;
+}
+
+.viewTaskDetail-Card {
+  background-color: whitesmoke;
+  width: 600px;
+  height: 100%;
+  border: 2px solid #ff6b00;
+  margin: 0 auto;
+  margin-top: 2rem;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.card-Header {
+  background-color: var(--nfq);
+  color: var(--white);
+  padding: 1rem;
+  text-align: center;
+  width: 100%;
+}
+
+.card-Body {
+  margin: 1rem 0rem 1rem 0rem;
+}
+
+.card-Dots {
+  border-bottom: 1px solid var(--nfq);
+  border-bottom-style: dotted;
+  border-width: thick;
+  width: 100%;
+  margin: 0.5rem 0rem 0.5rem 0rem;
+}
+
+.card-Body > h6 {
+  margin: 1rem 0rem 1rem 0rem;
+  color: black;
+  font-size: 1rem;
+}
+
+.fa-icons {
+  text-align: center;
+}
+
+.fa-edit {
+  color: rgb(97, 171, 255);
+}
+.fa-trash {
+  color: rgb(212, 102, 102);
+}
+
+.fa-edit,
+.fa-trash {
+  margin: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.fa-edit:hover,
+.fa-trash:hover {
+  cursor: pointer;
+}

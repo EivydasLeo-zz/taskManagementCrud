@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
+import './ViewTaskDetails.css';
 import { deleteOneTask, getSingleTask } from './../../service/fetchData';
 import { toast } from 'react-toastify';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrashAlt, faEdit } from '@fortawesome/free-solid-svg-icons';
+
 class ViewTaskDetails extends Component {
   constructor(props) {
     super(props);
@@ -35,19 +39,22 @@ class ViewTaskDetails extends Component {
     const { _id, title, description, category, status, createdAt, updatedAt } = this.state.taskDetailsData;
     return (
       <div className="viewTaskDetail-Container">
-        <div className="viewTaskDetail-cardBody" key={_id}>
-          <h6 className="cardBody-Title">Title: {title} </h6>
-          <h6 className="cardBody-Description">Description:{description} </h6>
-          <h6 className="cardBody-Category">Category: {category} </h6>
-          <h6 className="cardBody-Status">Status: {status} </h6>
-          <h6 className="cardBody-CreationDate">Creation Date: {createdAt}</h6>
-          <h6 className="cardBody-UpdateDate">Update Date: {updatedAt}</h6>
-          <button className="cardBody-EditBtn" onClick={() => this.handleEdit(_id)}>
-            Edit
-          </button>
-          <button className="cardBody-DeleteBtn" onClick={() => this.handleDelete(_id)}>
-            Delete
-          </button>
+        <div className="viewTaskDetail-Card" key={_id}>
+          <div className="card-Header">
+            <h3 className="card-Title">{title} </h3>
+          </div>
+          <div className="card-Body">
+            <h6 className="card-Body__Description">Description: {description} </h6>
+            <h6 className="card-Body__Category">Category: {category} </h6>
+            <h6 className="card-Status">Status: {status} </h6>
+            <h6 className="card-Body__CreationDate">Creation Date: {createdAt}</h6>
+            <h6 className="card-Body__UpdateDate">Update Date: {updatedAt}</h6>
+          </div>
+          <div className="card-Dots"> </div>
+          <div className="fa-icons">
+            <FontAwesomeIcon className="fa-edit" icon={faEdit} onClick={() => this.handleEdit(_id)} />
+            <FontAwesomeIcon className="fa-trash" icon={faTrashAlt} onClick={() => this.handleDelete(_id)} />
+          </div>
         </div>
       </div>
     );
