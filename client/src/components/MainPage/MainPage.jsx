@@ -13,6 +13,7 @@ class MainPage extends Component {
         <Navbar />
         <Switch>
           <Route path="/addNewTask" component={NewTask}></Route>
+          <Route path="/allTasks/edit/:id" component={NewTask}></Route>
           <Route path="/allTasks/:id" component={ViewTaskDetails}></Route>
           <Route path="/" component={TaskList}></Route>
         </Switch>

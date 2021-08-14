@@ -22,6 +22,10 @@ class ViewTaskDetails extends Component {
     this.props.history.push('/allTasks');
   }
 
+  handleEdit(_id) {
+    this.props.history.push('/allTasks/edit/' + _id);
+  }
+
   componentDidMount() {
     this.handleGetTask();
   }
@@ -37,7 +41,9 @@ class ViewTaskDetails extends Component {
           <h6 className="cardBody-Status">Status: {status} </h6>
           <h6 className="cardBody-CreationDate">Creation Date: {createdAt}</h6>
           <h6 className="cardBody-UpdateDate">Update Date: {updatedAt}</h6>
-          <button className="cardBody-EditBtn">Edit</button>
+          <button className="cardBody-EditBtn" onClick={() => this.handleEdit(_id)}>
+            Edit
+          </button>
           <button className="cardBody-DeleteBtn" onClick={() => this.handleDelete(_id)}>
             Delete
           </button>

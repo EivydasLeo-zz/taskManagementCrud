@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { postNewTask } from '../../service/fetchData';
+import { editOneTask, postNewTask } from '../../service/fetchData';
+import { getAllTasks } from './../../service/fetchData';
 
 class NewTask extends Component {
   constructor() {
@@ -10,6 +11,13 @@ class NewTask extends Component {
       category: '',
       status: '',
     };
+  }
+
+  async componentDidMount() {
+    if (this.props.match.params.id) {
+      const task = (await getAllTasks()).find((obj) => obj._id === this.props.match.params.id);
+      this.setState(task);
+    }
   }
 
   handleTitle = (event) => {
@@ -33,7 +41,13 @@ class NewTask extends Component {
       category: this.state.category,
       status: this.state.status,
     };
-    postNewTask(objToSend);
+
+    if (this.state._id) {
+      editOneTask(this.state._id, objToSend);
+    } else {
+      postNewTask(objToSend);
+    }
+
     const history = this.props.history;
     history.push('/');
     console.log('I will send this ', objToSend);
