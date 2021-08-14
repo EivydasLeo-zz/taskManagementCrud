@@ -58,3 +58,13 @@ export const deleteOneTask = async (id) => {
     console.log('Delete task failed..', err);
   }
 };
+
+export const editOneTask = async (id, newBody) => {
+  const res = await fetch(`${fetchApiBaseUrl}/allTasks/edit/${id}`, {
+    method: 'PUT',
+    body: JSON.stringify(newBody),
+    ...reqOptions,
+  });
+  console.log(res);
+  await res.json();
+};
