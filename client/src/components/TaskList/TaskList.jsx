@@ -37,20 +37,18 @@ class TaskList extends Component {
                 <tr>
                   <th>Title</th>
                   <th>Description</th>
-                  <th>Date</th>
                   <th>Status</th>
                   <th>More Details</th>
                 </tr>
               </thead>
               <tbody>
-                {this.state.tasksData.map((data) => (
-                  <tr key={data._id}>
-                    <td>{data.title}</td>
-                    <td>{data.description}</td>
-                    <td>{data.createdAt}</td>
-                    <td>{data.status}</td>
+                {this.state.tasksData.map(({ _id, title, description, status }) => (
+                  <tr key={_id}>
+                    <td>{title}</td>
+                    <td>{description}</td>
+                    <td>{status}</td>
                     <td>
-                      <button onClick={() => this.handleView(data._id)}>View Details</button>
+                      <button onClick={() => this.handleView(_id)}>View Details</button>
                     </td>
                   </tr>
                 ))}
