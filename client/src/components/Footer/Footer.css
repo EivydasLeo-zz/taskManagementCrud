@@ -1,0 +1,17 @@
+/* Variables */
+:root {
+  --white: rgb(255, 255, 255);
+  --nfq: #ff6b00;
+  --gray: #999999;
+  --blackshadow: rgba(0, 0, 0, 0.8);
+  --textgray: #757575;
+}
+
+.footer-Container {
+  height: 80px;
+  background-color: var(--nfq);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
