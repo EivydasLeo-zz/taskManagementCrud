@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { editOneTask, postNewTask } from '../../service/fetchData';
 import { getAllTasks } from './../../service/fetchData';
-
+import { toast } from 'react-toastify';
 class NewTask extends Component {
   constructor() {
     super();
@@ -44,8 +44,10 @@ class NewTask extends Component {
 
     if (this.state._id) {
       editOneTask(this.state._id, objToSend);
+      toast.info(`Task has been edited.`);
     } else {
       postNewTask(objToSend);
+      toast.success(`New task has been created.`);
     }
 
     const history = this.props.history;

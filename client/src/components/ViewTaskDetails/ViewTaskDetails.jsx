@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { deleteOneTask, getSingleTask } from './../../service/fetchData';
-
+import { toast } from 'react-toastify';
 class ViewTaskDetails extends Component {
   constructor(props) {
     super(props);
@@ -19,6 +19,7 @@ class ViewTaskDetails extends Component {
 
   async handleDelete(taskId) {
     await deleteOneTask(taskId);
+    toast.error(`Task has been deleted.`);
     this.props.history.push('/allTasks');
   }
 
