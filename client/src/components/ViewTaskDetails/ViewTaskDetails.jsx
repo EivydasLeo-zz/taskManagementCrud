@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { getSingleTask } from './../../service/fetchData';
+import { deleteOneTask, getSingleTask } from './../../service/fetchData';
 
 class ViewTaskDetails extends Component {
   constructor(props) {
@@ -9,10 +9,21 @@ class ViewTaskDetails extends Component {
     };
   }
 
-  async componentDidMount() {
+  async handleGetTask() {
     const currentTaskId = this.props.match.params.id;
     const task = await getSingleTask(currentTaskId);
+    console.log(task);
+    console.log(this.props);
     this.setState({ taskDetailsData: task });
+  }
+
+  async handleDelete(taskId) {
+    await deleteOneTask(taskId);
+    this.props.history.push('/allTasks');
+  }
+
+  componentDidMount() {
+    this.handleGetTask();
   }
 
   render() {
@@ -27,7 +38,9 @@ class ViewTaskDetails extends Component {
           <h6 className="cardBody-CreationDate">Creation Date: {createdAt}</h6>
           <h6 className="cardBody-UpdateDate">Update Date: {updatedAt}</h6>
           <button className="cardBody-EditBtn">Edit</button>
-          <button className="cardBody-DeleteBtn">Delete</button>
+          <button className="cardBody-DeleteBtn" onClick={() => this.handleDelete(_id)}>
+            Delete
+          </button>
         </div>
       </div>
     );

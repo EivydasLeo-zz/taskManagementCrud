@@ -46,3 +46,15 @@ export const getSingleTask = async (id) => {
     console.log('Get single task error:', err);
   }
 };
+
+export const deleteOneTask = async (id) => {
+  try {
+    const res = await fetch(`${fetchApiBaseUrl}/allTasks/delete/${id}`, {
+      method: 'DELETE',
+      ...reqOptions,
+    });
+    await res.json();
+  } catch (err) {
+    console.log('Delete task failed..', err);
+  }
+};

@@ -59,4 +59,10 @@ app.get('/allTasks/:id', async (req, res) => {
   }
 });
 
+// Delete task
+app.delete('/allTasks/delete/:id', async (req, res) => {
+  await TaskModel.findOneAndDelete({ _id: req.params.id });
+  res.send({ sucess: true, msg: 'Task has been deleted' });
+});
+
 app.listen(PORT, console.log(`Backend online on port ${PORT}`));
