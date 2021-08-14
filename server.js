@@ -65,4 +65,19 @@ app.delete('/allTasks/delete/:id', async (req, res) => {
   res.send({ sucess: true, msg: 'Task has been deleted' });
 });
 
+// Edit task
+app.put('/allTasks/edit/:id', async (req, res) => {
+  const { title, description, category, status } = req.body;
+  await TaskModel.findOneAndUpdate(
+    { _id: req.params.id },
+    {
+      title,
+      description,
+      category,
+      status,
+    }
+  );
+  res.send({ success: true, msg: `Task ${title} has been updated.` });
+});
+
 app.listen(PORT, console.log(`Backend online on port ${PORT}`));
