@@ -1,0 +1,98 @@
+/* Variables */
+:root {
+  --white: rgb(255, 255, 255);
+  --nfq: #ff6b00;
+  --blackshadow: rgba(0, 0, 0, 0.8);
+  --textgray: #757575;
+}
+
+.newTaskContainer {
+  height: 730px;
+  margin-top: 12rem;
+}
+
+.newTask-Form {
+  background-color: var(--white);
+  border: 2px solid var(--nfq);
+  width: 600px;
+  height: 360px;
+  display: flex;
+  flex-flow: column;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+.newTask-Header {
+  background-color: var(--nfq);
+  color: var(--white);
+  padding: 1rem;
+  width: 100%;
+}
+
+.newTask-Body {
+  margin-top: 3rem;
+}
+
+.newTask-Title,
+.newTask-Description,
+.newTask-Category,
+.newTask-Status {
+  margin: 1rem 0 0 1rem;
+}
+
+label {
+  margin-right: 1rem;
+}
+
+.title-description {
+  width: 400px;
+}
+
+input {
+  padding: 2px;
+  border: 1px solid black;
+}
+input:focus {
+  outline: none !important;
+  border: 2px solid var(--nfq);
+}
+
+.title-input {
+  margin-left: 3.2rem;
+}
+
+.select-Category {
+  margin-left: 1.1rem;
+}
+
+.select-Category:focus {
+  outline: none !important;
+  border: 2px solid var(--nfq);
+}
+
+.select-Status {
+  margin-left: 2.25rem;
+}
+.select-Status:focus {
+  outline: none !important;
+  border: 2px solid var(--nfq);
+}
+
+.newTask-Footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2.5rem;
+}
+
+.newTask-SubmitBtn {
+  background-color: var(--nfq);
+  color: white;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 5px;
+}
+
+.newTask-SubmitBtn:hover {
+  cursor: pointer;
+}

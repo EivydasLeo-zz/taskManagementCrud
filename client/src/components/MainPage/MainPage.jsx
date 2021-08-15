@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './MainPage.css';
 import Navbar from '../Navbar/Navbar';
 import TaskList from './../TaskList/TaskList';
 import { Switch, Route } from 'react-router';

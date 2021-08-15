@@ -1,6 +1,5 @@
 .taskListContainer {
-  background: rgba(226, 225, 225, 0.466);
-  height: 1200px;
+  height: 810px;
   display: flex;
   flex-flow: column;
   align-items: center;

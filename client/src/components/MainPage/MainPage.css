@@ -1,0 +1,17 @@
+/* Variables */
+:root {
+  --white: rgb(255, 255, 255);
+  --nfq: #ff6b00;
+  --blackshadow: rgba(0, 0, 0, 0.8);
+  --textgray: #757575;
+}
+
+.mainPage {
+  background-image: url(./bg1.jpg);
+  background-size: cover;
+  background-position: bottom;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 0 0 0 800px #0000000a;
+}
