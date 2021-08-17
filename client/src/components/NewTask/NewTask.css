@@ -14,7 +14,7 @@
 .newTask-Form {
   background-color: var(--white);
   border: 2px solid var(--nfq);
-  width: 600px;
+  width: 90%;
   height: 360px;
   display: flex;
   flex-flow: column;
@@ -30,22 +30,27 @@
 }
 
 .newTask-Body {
-  margin-top: 3rem;
+  margin-top: 1rem;
 }
 
 .newTask-Title,
 .newTask-Description,
 .newTask-Category,
 .newTask-Status {
-  margin: 1rem 0 0 1rem;
+  margin: 1rem 1rem 0 1rem;
 }
 
 label {
   margin-right: 1rem;
 }
 
+.title-input {
+  margin-top: 0.5rem;
+}
+
 .title-description {
-  width: 400px;
+  width: 100%;
+  margin-top: 0.5rem;
 }
 
 input {
@@ -55,10 +60,6 @@ input {
 input:focus {
   outline: none !important;
   border: 2px solid var(--nfq);
-}
-
-.title-input {
-  margin-left: 3.2rem;
 }
 
 .select-Category {
@@ -95,4 +96,28 @@ input:focus {
 
 .newTask-SubmitBtn:hover {
   cursor: pointer;
+}
+
+@media only screen and (min-width: 600px) {
+  .newTask-Form {
+    width: 600px;
+    height: 360px;
+  }
+  .title-description {
+    width: 400px;
+  }
+
+  .title-input {
+    margin-left: 3.2rem;
+  }
+  .newTask-Body {
+    margin-top: 2rem;
+  }
+  .title-input {
+    margin-top: 0;
+  }
+
+  .title-description {
+    margin-top: 0;
+  }
 }

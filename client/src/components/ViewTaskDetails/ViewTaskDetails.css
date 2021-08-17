@@ -8,11 +8,12 @@
 
 .viewTaskDetail-Container {
   padding: 10rem 0rem 20rem 0;
+  height: 100%;
 }
 
 .viewTaskDetail-Card {
-  background-color: whitesmoke;
-  width: 600px;
+  background-color: var(--white);
+  width: 90%;
   height: 100%;
   border: 2px solid #ff6b00;
   margin: 0 auto;
@@ -21,6 +22,7 @@
   flex-flow: column;
   align-items: center;
   border-radius: 5px;
+  word-break: break-word;
 }
 
 .card-Header {
@@ -32,7 +34,7 @@
 }
 
 .card-Body {
-  margin: 1rem 0rem 1rem 0rem;
+  margin: 2rem 1rem 1rem 1rem;
 }
 
 .card-Dots {
@@ -69,4 +71,19 @@
 .fa-edit:hover,
 .fa-trash:hover {
   cursor: pointer;
+}
+
+.card-Body__Description,
+.card-Body__Category,
+.card-Status,
+.card-Body__CreationDate,
+.card-Body__UpdateDate {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+@media only screen and (min-width: 600px) {
+  .viewTaskDetail-Card {
+    width: 600px;
+  }
 }

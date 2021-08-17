@@ -95,7 +95,12 @@ class NewTask extends Component {
             </div>
             <div className="newTask-Category">
               <label className="category-label">Task Category:</label>
-              <select className="select-Category" id="category" onChange={this.handleCategory}>
+              <select
+                className="select-Category"
+                id="category"
+                onChange={this.handleCategory}
+                value={this.state.category}
+              >
                 <option className="category-option">Choose...</option>
                 <option value="Call">Call</option>
                 <option value="Email">Email</option>
@@ -105,7 +110,7 @@ class NewTask extends Component {
             </div>
             <div className="newTask-Status">
               <label className="status-label">Task Status:</label>
-              <select className="select-Status" id="status" onChange={this.handleStatus}>
+              <select onChange={this.handleStatus} value={this.state.status} className="select-Status" id="status">
                 <option className="status-option">Choose...</option>
                 <option value="Open">Open</option>
                 <option value="Closed">Closed</option>

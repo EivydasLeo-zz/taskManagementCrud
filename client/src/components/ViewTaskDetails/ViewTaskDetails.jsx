@@ -44,11 +44,23 @@ class ViewTaskDetails extends Component {
             <h3 className="card-Title">{title} </h3>
           </div>
           <div className="card-Body">
-            <h6 className="card-Body__Description">Description: {description} </h6>
-            <h6 className="card-Body__Category">Category: {category} </h6>
-            <h6 className="card-Status">Status: {status} </h6>
-            <h6 className="card-Body__CreationDate">Creation Date: {createdAt}</h6>
-            <h6 className="card-Body__UpdateDate">Update Date: {updatedAt}</h6>
+            <p className="card-Body__Description">
+              <strong>Description: </strong>
+              {description}
+            </p>
+            <p className="card-Body__Category">
+              <strong>Category:</strong> {category}
+            </p>
+            <p className="card-Status">
+              <strong>Status: </strong>
+              {status}
+            </p>
+            <p className="card-Body__CreationDate">
+              <strong>Creation Date:</strong> {createdAt}
+            </p>
+            <p className="card-Body__UpdateDate">
+              <strong>Update Date:</strong> {updatedAt}
+            </p>
           </div>
           <div className="card-Dots"> </div>
           <div className="fa-icons">
