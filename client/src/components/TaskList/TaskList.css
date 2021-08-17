@@ -1,32 +1,69 @@
+/* Variables */
+:root {
+  --white: rgb(255, 255, 255);
+  --nfq: #ff6b00;
+  --blackshadow: rgba(0, 0, 0, 0.8);
+  --textgray: #757575;
+}
+
 .taskListContainer {
-  height: 810px;
+  height: 100%;
+  padding-top: 6rem;
+  padding-bottom: 10rem;
   display: flex;
-  flex-flow: column;
-  align-items: center;
-  padding-top: 2rem;
+  flex-wrap: wrap;
 }
 
-.taskListTitle {
-  text-align: center;
+.taskList-Card {
+  width: 200px;
+  height: 100%;
+  background-color: var(--white);
+  border: 2px solid var(--nfq);
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-top: 2rem;
+  word-break: break-word;
+}
+
+.taskList-Card__Header {
   padding: 1rem;
-  margin-top: 0.2rem;
-  box-shadow: 0px 4px 10px 0px rgb(0 0 0 / 15%);
-  background-color: white;
-}
-
-.taskList-Body {
-  background-color: #fff;
-  padding: 1rem;
-}
-
-.taskList-Table {
+  background-color: var(--nfq);
+  color: var(--white);
   text-align: center;
-  border: 1px solid black;
 }
 
-.taskList-Table > table,
-th,
-td {
-  border: 1px solid black;
-  border-collapse: collapse;
+.taskList-Card__Body {
+  margin: 2rem 0.5rem 0 0.5rem;
+  text-align: center;
+  height: 100%;
 }
+
+.taskList-Card__BodyDescription {
+  margin-bottom: 1rem;
+}
+
+.taskList-Card__Btn {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.view-details__Btn {
+  background-color: var(--nfq);
+  color: var(--white);
+  border: none;
+  padding: 0.7rem;
+  border-radius: 5px;
+  margin-bottom: 2rem;
+}
+
+.view-details__Btn:hover {
+  cursor: pointer;
+}
+
+strong {
+  font-size: 1.1rem;
+}
+
+/* Responsive */
+
+/* @media only screen and (min-width: 375px) {} */

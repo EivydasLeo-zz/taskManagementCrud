@@ -11,6 +11,7 @@
   --lightwhite: rgb(233, 231, 231);
 }
 
+/* Global */
 * {
   box-sizing: border-box;
   margin: 0;

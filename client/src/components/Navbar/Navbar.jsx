@@ -12,6 +12,9 @@ class Navbar extends Component {
             <img src={nfqLogo} alt="nfq-logo" />
           </Link>
         </div>
+        <div className="navbarLink">
+          <Link to="/addNewTask">Add New Task</Link>
+        </div>
       </div>
     );
   }

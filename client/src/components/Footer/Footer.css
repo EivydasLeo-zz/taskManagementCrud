@@ -8,10 +8,15 @@
 }
 
 .footer-Container {
+  text-align: center;
   height: 60px;
-  background-color: var(--nfq);
+  background-color: #ff6a00;
   color: var(--white);
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 1px solid var(--nfq);
+  -webkit-box-shadow: 0px 0px 10px rgb(50 50 50 / 50%);
+  -moz-box-shadow: 0px 0px 10px rgb(50 50 50 / 50%);
+  box-shadow: 0px 0px 10px rgb(50 50 50 / 50%);
 }

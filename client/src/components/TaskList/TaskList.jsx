@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../TaskList/TaskList.css';
 import { getAllTasks } from '../../service/fetchData';
-import { Link } from 'react-router-dom';
+
 class TaskList extends Component {
   constructor(props) {
     super(props);
@@ -12,6 +12,7 @@ class TaskList extends Component {
 
   async getTasks() {
     const tasks = await getAllTasks();
+    console.log(tasks);
     this.setState({ tasksData: tasks });
   }
 
@@ -26,36 +27,28 @@ class TaskList extends Component {
   render() {
     return (
       <div className="taskListContainer">
-        <div className="taskList-Body">
-          <div className="taskList-Table">
-            <h3>Task management system</h3>
-            <Link to="/addNewTask">
-              <button>Add Task</button>
-            </Link>
-            <table>
-              <thead>
-                <tr>
-                  <th>Title</th>
-                  <th>Description</th>
-                  <th>Status</th>
-                  <th>More Details</th>
-                </tr>
-              </thead>
-              <tbody>
-                {this.state.tasksData.map(({ _id, title, description, status }) => (
-                  <tr key={_id}>
-                    <td>{title}</td>
-                    <td>{description}</td>
-                    <td>{status}</td>
-                    <td>
-                      <button onClick={() => this.handleView(_id)}>View Details</button>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+        {this.state.tasksData.map(({ _id, title, description, status }) => (
+          <div className="taskList-Card " key={_id}>
+            <div className="taskList-Card__Header">
+              <h3 className="taskList-Card__Title">{title} </h3>
+            </div>
+            <div className="taskList-Card__Body ">
+              <p className="taskList-Card__BodyDescription">
+                <strong>Description: </strong>
+                {description}
+              </p>
+              <p className="taskList-Card__Status" onClick={this.handleChange}>
+                <strong>Status: </strong>
+                {status}
+              </p>
+              <div className="taskList-Card__Btn">
+                <button className="view-details__Btn" onClick={() => this.handleView(_id)}>
+                  View Details
+                </button>
+              </div>
+            </div>
           </div>
-        </div>
+        ))}
       </div>
     );
   }

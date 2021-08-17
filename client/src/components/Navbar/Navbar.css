@@ -1,10 +1,39 @@
+/* Imported google fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+
 .navbarContainer {
   background-color: #ff6b00;
   height: 100px;
   box-shadow: 0px 2px 2px 0px rgb(0 0 0 / 25%);
+  display: flex;
+  align-items: center;
 }
 
 img {
   width: 100px;
-  margin-left: 1rem;
+}
+
+.navbarLink {
+  margin: 0 auto;
+}
+
+.navbarLink > a {
+  font-family: 'Black Ops One', cursive;
+  font-size: 1.4rem;
+  color: white;
+  list-style: none;
+  text-decoration: none;
+}
+
+.navbarLink > a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+
+@media only screen and (min-width: 600px) {
+  .navbarLink {
+    padding-right: 6.5rem;
+  }
 }
