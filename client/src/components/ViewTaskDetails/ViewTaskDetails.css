@@ -2,8 +2,6 @@
 :root {
   --white: rgb(255, 255, 255);
   --nfq: #ff6b00;
-  --blackshadow: rgba(0, 0, 0, 0.8);
-  --textgray: #757575;
 }
 
 .viewTaskDetail-Container {
@@ -15,7 +13,7 @@
   background-color: var(--white);
   width: 90%;
   height: 100%;
-  border: 2px solid #ff6b00;
+  border: 2px solid var(--nfq);
   margin: 0 auto;
   margin-top: 2rem;
   display: flex;

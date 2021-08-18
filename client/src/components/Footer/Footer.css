@@ -2,15 +2,12 @@
 :root {
   --white: rgb(255, 255, 255);
   --nfq: #ff6b00;
-  --gray: #999999;
-  --blackshadow: rgba(0, 0, 0, 0.8);
-  --textgray: #757575;
 }
 
 .footer-Container {
   text-align: center;
   height: 60px;
-  background-color: #ff6a00;
+  background-color: var(--nfq);
   color: var(--white);
   display: flex;
   align-items: center;

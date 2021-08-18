@@ -12,7 +12,6 @@ class TaskList extends Component {
 
   async getTasks() {
     const tasks = await getAllTasks();
-    console.log(tasks);
     this.setState({ tasksData: tasks });
   }
 
@@ -37,7 +36,7 @@ class TaskList extends Component {
                 <strong>Description: </strong>
                 {description}
               </p>
-              <p className="taskList-Card__Status" onClick={this.handleChange}>
+              <p className="taskList-Card__Status">
                 <strong>Status: </strong>
                 {status}
               </p>

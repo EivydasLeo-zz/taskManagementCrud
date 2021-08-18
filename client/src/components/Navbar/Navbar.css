@@ -1,9 +1,14 @@
 /* Imported google fonts */
-
 @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
 
+/* Variables */
+:root {
+  --white: rgb(255, 255, 255);
+  --nfq: #ff6b00;
+}
+
 .navbarContainer {
-  background-color: #ff6b00;
+  background-color: var(--nfq);
   height: 100px;
   box-shadow: 0px 2px 2px 0px rgb(0 0 0 / 25%);
   display: flex;
@@ -21,7 +26,7 @@ img {
 .navbarLink > a {
   font-family: 'Black Ops One', cursive;
   font-size: 1.4rem;
-  color: white;
+  color: var(--white);
   list-style: none;
   text-decoration: none;
 }

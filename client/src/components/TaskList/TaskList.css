@@ -2,14 +2,12 @@
 :root {
   --white: rgb(255, 255, 255);
   --nfq: #ff6b00;
-  --blackshadow: rgba(0, 0, 0, 0.8);
-  --textgray: #757575;
 }
 
 .taskListContainer {
   height: 100%;
-  padding-top: 6rem;
-  padding-bottom: 10rem;
+  padding-top: 12rem;
+  padding-bottom: 43rem;
   display: flex;
   flex-wrap: wrap;
 }
@@ -63,7 +61,3 @@
 strong {
   font-size: 1.1rem;
 }
-
-/* Responsive */
-
-/* @media only screen and (min-width: 375px) {} */

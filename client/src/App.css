@@ -1,16 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap');
 
-/* Variables */
-
-:root {
-  --white: #fff;
-  --nfq: #ff6b00;
-  --gray: #999999;
-  --blackshadow: rgba(0, 0, 0, 0.8);
-  --textgray: #757575;
-  --lightwhite: rgb(233, 231, 231);
-}
-
 /* Global */
 * {
   box-sizing: border-box;
