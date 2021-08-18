@@ -10,8 +10,8 @@ A simple app to create, view, update, delete Tasks
 
 ## scrpts
 
-1. `npm start` runs backend with nodemon
-2. `npm run react` runs front end from client folder
+1. `npm start` runs backend with nodemon (run it from outside client folder)
+2. `npm run react` runs front end (run it from outside client folder)
 
 ## Dependancies
 
