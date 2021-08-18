@@ -82,6 +82,6 @@
 
 @media only screen and (min-width: 600px) {
   .viewTaskDetail-Card {
-    width: 600px;
+    width: 400px;
   }
 }

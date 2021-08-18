@@ -6,10 +6,10 @@
 
 .taskListContainer {
   height: 100%;
-  padding-top: 12rem;
-  padding-bottom: 43rem;
+  padding: 12rem 1rem 43rem 1rem;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .taskList-Card {
@@ -18,8 +18,7 @@
   background-color: var(--white);
   border: 2px solid var(--nfq);
   border-radius: 5px;
-  margin: 0 auto;
-  margin-top: 2rem;
+  margin: 2rem 4rem 2rem 4rem;
   word-break: break-word;
 }
 
