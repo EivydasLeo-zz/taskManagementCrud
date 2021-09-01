@@ -4,7 +4,7 @@
   --nfq: #ff6b00;
 }
 
-.footer-Container {
+.footer-container {
   text-align: center;
   height: 60px;
   background-color: var(--nfq);

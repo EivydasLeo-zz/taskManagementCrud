@@ -10,7 +10,7 @@ class Footer extends Component {
   }
   render() {
     return (
-      <footer className="footer-Container">
+      <footer className="footer-container">
         <p className="footer__text">
           Project created by Eivydas Leonavicius. All rights reserved &copy; {this.state.currentYear}
         </p>

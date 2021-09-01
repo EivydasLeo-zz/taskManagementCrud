@@ -69,11 +69,11 @@ class NewTask extends Component {
 
   render() {
     return (
-      <div className="newTaskContainer">
-        <form className="newTask-Form" onSubmit={this.handleSubmit}>
-          <div className="newTask-Header">{this.handleText()}</div>
-          <div className="newTask-Body">
-            <div className="newTask-Title">
+      <div className="new-task__container">
+        <form className="new-task__form" onSubmit={this.handleSubmit}>
+          <div className="new-task__header">{this.handleText()}</div>
+          <div className="new-task__body">
+            <div className="new-task__title">
               <label className="title-label">Task Title:</label>
               <input
                 className="title-input"
@@ -83,7 +83,7 @@ class NewTask extends Component {
                 onChange={this.handleTitle}
               />
             </div>
-            <div className="newTask-Description">
+            <div className="new-task__description">
               <label className="description-label">Task Description:</label>
               <input
                 className="title-description"
@@ -93,10 +93,10 @@ class NewTask extends Component {
                 onChange={this.handleDescription}
               />
             </div>
-            <div className="newTask-Category">
+            <div className="new-task__category">
               <label className="category-label">Task Category:</label>
               <select
-                className="select-Category"
+                className="select-category"
                 id="category"
                 onChange={this.handleCategory}
                 value={this.state.category}
@@ -108,17 +108,17 @@ class NewTask extends Component {
                 <option value="TeamBuilding">TeamBuilding</option>
               </select>
             </div>
-            <div className="newTask-Status">
+            <div className="new-task__status">
               <label className="status-label">Task Status:</label>
-              <select onChange={this.handleStatus} value={this.state.status} className="select-Status" id="status">
+              <select onChange={this.handleStatus} value={this.state.status} className="select-status" id="status">
                 <option className="status-option">Choose...</option>
                 <option value="Open">Open</option>
                 <option value="Closed">Closed</option>
                 <option value="Completed">Completed</option>
               </select>
             </div>
-            <div className="newTask-Footer">
-              <button className="newTask-SubmitBtn" type="submit">
+            <div className="new-task__footer">
+              <button className="new-task__submit-btn" type="submit">
                 Submit
               </button>
             </div>

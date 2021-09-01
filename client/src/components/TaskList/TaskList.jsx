@@ -25,23 +25,23 @@ class TaskList extends Component {
 
   render() {
     return (
-      <div className="taskListContainer">
+      <div className="task-list__container">
         {this.state.tasksData.map(({ _id, title, description, status }) => (
-          <div className="taskList-Card " key={_id}>
-            <div className="taskList-Card__Header">
-              <h3 className="taskList-Card__Title">{title} </h3>
+          <div className="task-list__card " key={_id}>
+            <div className="task-list__card-header">
+              <h3 className="task-list__card-title">{title} </h3>
             </div>
-            <div className="taskList-Card__Body ">
-              <p className="taskList-Card__BodyDescription">
+            <div className="task-list__card-body ">
+              <p className="task-list__card-body__description">
                 <strong>Description: </strong>
                 {description}
               </p>
-              <p className="taskList-Card__Status">
+              <p className="task-list__card-status">
                 <strong>Status: </strong>
                 {status}
               </p>
-              <div className="taskList-Card__Btn">
-                <button className="view-details__Btn" onClick={() => this.handleView(_id)}>
+              <div className="task-list__card-btn">
+                <button className="view-details__btn" onClick={() => this.handleView(_id)}>
                   View Details
                 </button>
               </div>

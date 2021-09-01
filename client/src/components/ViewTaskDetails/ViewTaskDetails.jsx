@@ -38,31 +38,31 @@ class ViewTaskDetails extends Component {
   render() {
     const { _id, title, description, category, status, createdAt, updatedAt } = this.state.taskDetailsData;
     return (
-      <div className="viewTaskDetail-Container">
-        <div className="viewTaskDetail-Card" key={_id}>
-          <div className="card-Header">
-            <h3 className="card-Title">{title} </h3>
+      <div className="view-task__detail-container">
+        <div className="view-task__detail-card" key={_id}>
+          <div className="card-header">
+            <h3 className="card-title">{title} </h3>
           </div>
-          <div className="card-Body">
-            <p className="card-Body__Description">
+          <div className="card-body">
+            <p className="card-body__description">
               <strong>Description: </strong>
               {description}
             </p>
-            <p className="card-Body__Category">
+            <p className="card-body__category">
               <strong>Category:</strong> {category}
             </p>
-            <p className="card-Status">
+            <p className="card-status">
               <strong>Status: </strong>
               {status}
             </p>
-            <p className="card-Body__CreationDate">
+            <p className="card-body__creation-date">
               <strong>Creation Date:</strong> {createdAt}
             </p>
-            <p className="card-Body__UpdateDate">
+            <p className="card-body__update-date">
               <strong>Update Date:</strong> {updatedAt}
             </p>
           </div>
-          <div className="card-Dots"> </div>
+          <div className="card-dots"> </div>
           <div className="fa-icons">
             <FontAwesomeIcon className="fa-edit" icon={faEdit} onClick={() => this.handleEdit(_id)} />
             <FontAwesomeIcon className="fa-trash" icon={faTrashAlt} onClick={() => this.handleDelete(_id)} />

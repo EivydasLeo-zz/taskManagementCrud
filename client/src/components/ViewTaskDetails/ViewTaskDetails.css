@@ -4,12 +4,12 @@
   --nfq: #ff6b00;
 }
 
-.viewTaskDetail-Container {
+.view-task__detail-container {
   padding: 10rem 0rem 20rem 0;
   height: 100%;
 }
 
-.viewTaskDetail-Card {
+.view-task__detail-card {
   background-color: var(--white);
   width: 90%;
   height: 100%;
@@ -23,7 +23,7 @@
   word-break: break-word;
 }
 
-.card-Header {
+.card-header {
   background-color: var(--nfq);
   color: var(--white);
   padding: 1rem;
@@ -31,11 +31,11 @@
   width: 100%;
 }
 
-.card-Body {
+.card-body {
   margin: 2rem 1rem 1rem 1rem;
 }
 
-.card-Dots {
+.card-dots {
   border-bottom: 1px solid var(--nfq);
   border-bottom-style: dotted;
   border-width: thick;
@@ -43,7 +43,7 @@
   margin: 0.5rem 0rem 0.5rem 0rem;
 }
 
-.card-Body > h6 {
+.card-body > h6 {
   margin: 1rem 0rem 1rem 0rem;
   color: black;
   font-size: 1rem;
@@ -71,17 +71,17 @@
   cursor: pointer;
 }
 
-.card-Body__Description,
-.card-Body__Category,
-.card-Status,
-.card-Body__CreationDate,
-.card-Body__UpdateDate {
+.card-body__description,
+.card-body__category,
+.card-status,
+.card-body__creation-date,
+.card-body__update-date {
   margin-bottom: 1rem;
   line-height: 1.5;
 }
 
 @media only screen and (min-width: 600px) {
-  .viewTaskDetail-Card {
+  .view-task__detail-card {
     width: 400px;
   }
 }

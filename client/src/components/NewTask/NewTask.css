@@ -4,13 +4,13 @@
   --nfq: #ff6b00;
 }
 
-.newTaskContainer {
+.new-task__container {
   height: 100%;
   margin-top: 12rem;
   padding-bottom: 20rem;
 }
 
-.newTask-Form {
+.new-task__form {
   background-color: var(--white);
   border: 2px solid var(--nfq);
   width: 90%;
@@ -21,21 +21,21 @@
   border-radius: 5px;
 }
 
-.newTask-Header {
+.new-task__header {
   background-color: var(--nfq);
   color: var(--white);
   padding: 1rem;
   width: 100%;
 }
 
-.newTask-Body {
+.new-task__body {
   margin-top: 1rem;
 }
 
-.newTask-Title,
-.newTask-Description,
-.newTask-Category,
-.newTask-Status {
+.new-task__title,
+.new-task__description,
+.new-task__category,
+.new-task__status {
   margin: 1rem 1rem 0 1rem;
 }
 
@@ -61,31 +61,31 @@ input:focus {
   border: 2px solid var(--nfq);
 }
 
-.select-Category {
+.select-category {
   margin-left: 1.1rem;
 }
 
-.select-Category:focus {
+.select-category:focus {
   outline: none !important;
   border: 2px solid var(--nfq);
 }
 
-.select-Status {
+.select-status {
   margin-left: 2.25rem;
 }
-.select-Status:focus {
+.select-status:focus {
   outline: none !important;
   border: 2px solid var(--nfq);
 }
 
-.newTask-Footer {
+.new-task__footer {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 2.5rem;
 }
 
-.newTask-SubmitBtn {
+.new-task__submit-btn {
   background-color: var(--nfq);
   color: var(--white);
   border: none;
@@ -93,12 +93,12 @@ input:focus {
   border-radius: 5px;
 }
 
-.newTask-SubmitBtn:hover {
+.new-task__submit-btn:hover {
   cursor: pointer;
 }
 
 @media only screen and (min-width: 600px) {
-  .newTask-Form {
+  .new-task__form {
     width: 600px;
     height: 360px;
   }
@@ -109,7 +109,7 @@ input:focus {
   .title-input {
     margin-left: 3.2rem;
   }
-  .newTask-Body {
+  .new-task__body {
     margin-top: 2rem;
   }
   .title-input {

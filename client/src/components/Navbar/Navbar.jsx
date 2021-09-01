@@ -6,13 +6,13 @@ class Navbar extends Component {
   state = {};
   render() {
     return (
-      <div className="navbarContainer">
-        <div className="navbarImg">
+      <div className="navbar-container">
+        <div className="navbar__img">
           <Link to="/">
             <img src={nfqLogo} alt="nfq-logo" />
           </Link>
         </div>
-        <div className="navbarLink">
+        <div className="navbar__link">
           <Link to="/addNewTask">Add New Task</Link>
         </div>
       </div>

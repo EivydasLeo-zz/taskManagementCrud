@@ -10,7 +10,7 @@ class MainPage extends Component {
   state = {};
   render() {
     return (
-      <div className="mainPage">
+      <div className="main-page">
         <Navbar />
         <Switch>
           <Route path="/addNewTask" component={NewTask}></Route>
